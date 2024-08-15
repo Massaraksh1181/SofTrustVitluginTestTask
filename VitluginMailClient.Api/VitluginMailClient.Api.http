@@ -1,0 +1,6 @@
+@VitluginMailClient.Api_HostAddress = http://localhost:5279
+
+GET {{VitluginMailClient.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

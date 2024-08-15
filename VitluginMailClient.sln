@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VitluginMailClient.Api", "VitluginMailClient.Api\VitluginMailClient.Api.csproj", "{234436BB-5E49-4616-BCC8-32173FEAF345}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VitluginMailClient.Domain", "VitluginMailClient.Domain\VitluginMailClient.Domain.csproj", "{155473F6-936B-445D-8D72-B4B08A7CC7F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{234436BB-5E49-4616-BCC8-32173FEAF345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{234436BB-5E49-4616-BCC8-32173FEAF345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{234436BB-5E49-4616-BCC8-32173FEAF345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{234436BB-5E49-4616-BCC8-32173FEAF345}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155473F6-936B-445D-8D72-B4B08A7CC7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155473F6-936B-445D-8D72-B4B08A7CC7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155473F6-936B-445D-8D72-B4B08A7CC7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155473F6-936B-445D-8D72-B4B08A7CC7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DB28047-5B63-4CCE-B861-A707DFF18EFB}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\bin\Debug\net8.0\VitluginMailClient.Domain.deps.json
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\bin\Debug\net8.0\VitluginMailClient.Domain.runtimeconfig.json
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\bin\Debug\net8.0\VitluginMailClient.Domain.dll
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\bin\Debug\net8.0\VitluginMailClient.Domain.pdb
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\VitluginMailClient.Domain.csproj.AssemblyReference.cache
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\VitluginMailClient.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\VitluginMailClient.Domain.AssemblyInfoInputs.cache
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\VitluginMailClient.Domain.AssemblyInfo.cs
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\VitluginMailClient.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\VitluginMailClient.Domain.dll
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\refint\VitluginMailClient.Domain.dll
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\VitluginMailClient.Domain.pdb
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\VitluginMailClient.Domain.genruntimeconfig.cache
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\ref\VitluginMailClient.Domain.dll

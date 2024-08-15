@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "SW8LFPDTvOlDMWyKyDd/qbU1xVkxBeSMM+twVptw/+k=",
+  "Source": "VitluginMailClient.Api",
+  "BasePath": "_content/VitluginMailClient.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
