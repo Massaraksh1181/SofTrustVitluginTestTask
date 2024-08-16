@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VitluginMailClient.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a539a2788c0f104a99f8c27358f3b8770d467f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0ce94c9b3e26f8993e5211b0bcbe0c97adfed61")]
 [assembly: System.Reflection.AssemblyProductAttribute("VitluginMailClient.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VitluginMailClient.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
