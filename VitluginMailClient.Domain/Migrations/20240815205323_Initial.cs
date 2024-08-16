@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
+//git itinusing Microsoft.EntityFrameworkCore.Migrations;
+
 #nullable disable
 
 namespace VitluginMailClient.Domain.Migrations

@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\VitluginMailClient.Domain\VitluginMailClient.Domain.csproj" />
   </ItemGroup>
 

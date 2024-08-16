@@ -137,3 +137,4 @@ C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Api\obj\D
 C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Api\obj\Debug\net8.0\VitluginMailClient.Api.pdb
 C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Api\obj\Debug\net8.0\VitluginMailClient.Api.genruntimeconfig.cache
 C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Api\obj\Debug\net8.0\ref\VitluginMailClient.Api.dll
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Api\obj\Debug\net8.0\VitluginMailClient.Api.sourcelink.json

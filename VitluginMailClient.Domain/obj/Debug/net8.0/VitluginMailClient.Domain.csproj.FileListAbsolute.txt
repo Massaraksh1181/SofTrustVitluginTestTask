@@ -12,3 +12,4 @@ C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\ob
 C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\VitluginMailClient.Domain.pdb
 C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\VitluginMailClient.Domain.genruntimeconfig.cache
 C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\ref\VitluginMailClient.Domain.dll
+C:\Users\Massaracsh\source\repos\VitluginMailClient\VitluginMailClient.Domain\obj\Debug\net8.0\VitluginMailClient.Domain.sourcelink.json
