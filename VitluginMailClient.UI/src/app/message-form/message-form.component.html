@@ -10,9 +10,15 @@
       <input type="text" id="phone" [(ngModel)]="phone" name="phone" required>
   
       <label for="topic">Тема:</label>
-      <select id="topic" [(ngModel)]="topicId" name="topic" required>
+      <select id="topic" [(ngModel)]="topicId" name="topic" required (change)="onTopicChange($event)">
         <option *ngFor="let topic of topics" [value]="topic.id">{{ topic.name }}</option>
+        <option [value]="-1">ещё один пункт</option>
       </select>
+
+      <div *ngIf="showNewTopicInput">
+        <label for="newTopic">Новая тема:</label>
+        <input type="text" id="newTopic" [(ngModel)]="newTopic" name="newTopic">
+      </div>
   
       <label for="text">Ваше сообщение:</label>
       <textarea id="text" [(ngModel)]="text" name="text" required></textarea>

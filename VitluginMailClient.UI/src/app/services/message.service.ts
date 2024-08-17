@@ -23,4 +23,9 @@ export class MessageService {
   getTopics(): Observable<any[]> {
     return this.http.get<any[]>(`${this.topicsApiUrl}/GetAll`);
   }
+
+  createTopic(topic: any): Observable<any> {
+    return this.http.post<any>(`${this.topicsApiUrl}/Create`, topic);
+  }
+  
 }

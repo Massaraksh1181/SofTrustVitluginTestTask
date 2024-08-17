@@ -15,6 +15,8 @@ export class MessageFormComponent implements OnInit {
   email: string = '';
   phone: string = '';
   topicId: number = 0;
+  newTopic: string = '';
+  showNewTopicInput: boolean = false;
   text: string = '';
   topics: any[] = [];
   messageDetails: any = null;
@@ -28,7 +30,26 @@ export class MessageFormComponent implements OnInit {
     );
   }
 
+  onTopicChange(event: any): void {
+    this.topicId = +event.target.value;
+    this.showNewTopicInput = this.topicId === -1;
+  }
+
   submitForm(): void {
+    if (this.showNewTopicInput && this.newTopic) {
+      this.messageService.createTopic({ Name: this.newTopic }).subscribe(
+        response => {
+          this.topicId = response.id;
+          this.createMessage();
+        },
+        error => console.error('Error: ', error)
+      );
+    } else {
+      this.createMessage();
+    }
+  }
+
+  createMessage(): void {
     const input = {
       Name: this.name,
       Email: this.email,
@@ -47,7 +68,9 @@ export class MessageFormComponent implements OnInit {
 
   getMessageDetails(messageId: number): void {
     this.messageService.getMessageDetails(messageId).subscribe(
-      data => this.messageDetails = data,
+      data => { 
+      this.messageDetails = data;
+      },
       error => console.error('Error: ', error)
     );
   }
