@@ -1,8 +1,8 @@
-﻿using MailClientTestDomain;
-using MailClientTestDomain.Entities;
+﻿using VitluginMailClientDomain;
+using VitluginMailClientDomain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MailClientTestApi.Controllers
+namespace VitluginMailClientApi.Controllers
 {
     public class TopicsController : ControllerBaseApi
     {

@@ -1,7 +1,7 @@
-﻿using MailClientTestDomain.Entities;
+﻿using VitluginMailClientDomain.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MailClientTestApi.Dto
+namespace VitluginMailClientApi.Dto
 {
     public class CreateMessageDto
     {

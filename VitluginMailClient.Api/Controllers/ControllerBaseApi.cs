@@ -1,8 +1,8 @@
-﻿using MailClientTestDomain;
+﻿using VitluginMailClientDomain;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MailClientTestApi.Controllers
+namespace VitluginMailClientApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

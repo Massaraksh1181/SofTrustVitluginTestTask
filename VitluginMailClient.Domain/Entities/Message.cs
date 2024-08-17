@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MailClientTestDomain.Entities
+namespace VitluginMailClientDomain.Entities
 {
     public class Message : Entity
     {

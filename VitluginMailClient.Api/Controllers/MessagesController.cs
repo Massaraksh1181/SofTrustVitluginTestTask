@@ -1,9 +1,9 @@
-﻿using MailClientTestApi.Dto;
-using MailClientTestDomain;
-using MailClientTestDomain.Entities;
+﻿using VitluginMailClientApi.Dto;
+using VitluginMailClientDomain;
+using VitluginMailClientDomain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MailClientTestApi.Controllers
+namespace VitluginMailClientApi.Controllers
 {
     public class MessagesController : ControllerBaseApi
     {

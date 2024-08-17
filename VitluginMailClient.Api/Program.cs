@@ -1,4 +1,4 @@
-using MailClientTestDomain;
+using VitluginMailClientDomain;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +11,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(connectionString));
+
+builder.Services.AddCors(options => options.AddPolicy(name: "MessageOrigins",
+    policy =>
+    {
+        policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+    }));
 
 var app = builder.Build();
 
