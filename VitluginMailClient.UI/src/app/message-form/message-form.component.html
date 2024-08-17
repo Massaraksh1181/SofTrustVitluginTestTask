@@ -1,0 +1,30 @@
+<div *ngIf="!messageDetails">
+    <form (ngSubmit)="submitForm()">
+      <label for="name">Ваше имя:</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" required>
+  
+      <label for="email">Ваш Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" required>
+  
+      <label for="phone">Ваш телефон:</label>
+      <input type="text" id="phone" [(ngModel)]="phone" name="phone" required>
+  
+      <label for="topic">Тема:</label>
+      <select id="topic" [(ngModel)]="topicId" name="topic" required>
+        <option *ngFor="let topic of topics" [value]="topic.id">{{ topic.name }}</option>
+      </select>
+  
+      <label for="text">Ваше сообщение:</label>
+      <textarea id="text" [(ngModel)]="text" name="text" required></textarea>
+  
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+  
+  <div *ngIf="messageDetails">
+    <h2>Детали сообщения</h2>
+    <p><strong>Имя контакта:</strong> {{ messageDetails.contactName }}</p>
+    <p><strong>Тема:</strong> {{ messageDetails.topicName }}</p>
+    <p><strong>Сообщение:</strong> {{ messageDetails.messageText }}</p>
+  </div>
+  
