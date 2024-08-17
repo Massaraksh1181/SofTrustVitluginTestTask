@@ -1,0 +1,93 @@
+/* форма*/
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    max-width: 400px;
+    background-color: #fff;
+}
+
+/* стили для всех элементов */
+form label,
+form input,
+form select,
+form textarea,
+form button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* поля ввода */
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #000;
+    outline: none;
+    background-color: #fff;
+}
+
+/* названия полей */
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+/* кнопка отправки */
+button {
+    padding: 10px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* дополнительные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
