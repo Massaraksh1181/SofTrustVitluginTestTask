@@ -1,77 +1,83 @@
 <div *ngIf="!messageDetails">
   <form #form="ngForm" (ngSubmit)="submitForm(form)">
-      <div class="form-group">
-          <label for="name">Ваше имя:</label>
-          <div class="form-control">
-              <input type="text" id="name" [(ngModel)]="name" name="name" required #nameField="ngModel">
-              <div *ngIf="nameField.invalid && (nameField.touched || submitted)" class="error-message">
-                  <div *ngIf="nameField.errors?.['required']">Поле обязательно для заполнения</div>
-              </div>
-          </div>
-      </div>
 
-      <div class="form-group">
-          <label for="email">Ваш Email:</label>
-          <div class="form-control">
-              <input type="email" id="email" [(ngModel)]="email" name="email" required #emailField="ngModel"
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-              <div *ngIf="emailField.invalid && (emailField.touched || submitted)" class="error-message">
-                  <div *ngIf="emailField.errors?.['required']">Введите адрес почты</div>
-                  <div *ngIf="emailField.errors?.['pattern']">Введите корректный адрес почты</div>
-              </div>
-          </div>
-      </div>
+    <div class="form-header">
+      <h1>Напишите нам</h1>
+    </div>
 
-      <div class="form-group">
-          <label for="phone">Ваш телефон:</label>
-          <div class="form-control">
-              <input type="text" id="phone" [(ngModel)]="phone" name="phone" required pattern="^(\+\d{1,3}[- ]?)?\d{10}$" #phoneField="ngModel">
-              <div *ngIf="phoneField.invalid && (phoneField.touched || submitted)" class="error-message">
-                  <div *ngIf="phoneField.errors?.['required']">Введите номер телефона</div>
-                  <div *ngIf="phoneField.errors?.['pattern']">Введите корректный номер телефона</div>
-              </div>
-          </div>
-      </div>
+    <div class="form-group">
+        <label for="name">Ваше имя:</label>
+        <div class="form-control">
+          
+            <input type="text" id="name" [(ngModel)]="name" name="name" required #nameField="ngModel">
+            <div *ngIf="nameField.invalid && (nameField.touched || submitted)" class="error-message">
+                <div *ngIf="nameField.errors?.['required']">Поле обязательно для заполнения</div>
+            </div>
+        </div>
+    </div>
 
-      <div class="form-group">
-          <label for="topic">Тема:</label>
-          <div class="form-control">
-              <select id="topic" [(ngModel)]="topicId" name="topic" required (change)="onTopicChange($event)" #topicField="ngModel">
-                  <option *ngFor="let topic of topics" [value]="topic.id">{{ topic.name }}</option>
-                  <option [value]="-1">ещё один пункт</option>
-              </select>
-              <div *ngIf="topicField.invalid && (topicField.touched || submitted)" class="error-message">
-                  Выберите тему
-              </div>
-          </div>
-      </div>
+    <div class="form-group">
+        <label for="email">Ваш Email:</label>
+        <div class="form-control">
+            <input type="email" id="email" [(ngModel)]="email" name="email" required #emailField="ngModel"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <div *ngIf="emailField.invalid && (emailField.touched || submitted)" class="error-message">
+                <div *ngIf="emailField.errors?.['required']">Введите адрес почты</div>
+                <div *ngIf="emailField.errors?.['pattern']">Введите корректный адрес почты</div>
+            </div>
+        </div>
+    </div>
 
-      <div *ngIf="showNewTopicInput" class="form-group">
-          <label for="newTopic">Новая тема:</label>
-          <div class="form-control">
-              <input type="text" id="newTopic" [(ngModel)]="newTopic" name="newTopic" required #newTopicField="ngModel">
-              <div *ngIf="newTopicField.invalid && (newTopicField.touched || submitted)" class="error-message">
-                  Поле для новой темы должно быть заполнено
-              </div>
-          </div>
-      </div>
+    <div class="form-group">
+        <label for="phone">Ваш телефон:</label>
+        <div class="form-control">
+            <input type="text" id="phone" [(ngModel)]="phone" name="phone" required pattern="^(\+\d{1,3}[- ]?)?\d{10}$" #phoneField="ngModel">
+            <div *ngIf="phoneField.invalid && (phoneField.touched || submitted)" class="error-message">
+                <div *ngIf="phoneField.errors?.['required']">Введите номер телефона</div>
+                <div *ngIf="phoneField.errors?.['pattern']">Введите корректный номер телефона</div>
+            </div>
+        </div>
+    </div>
 
-      <div class="form-group">
-          <label for="text">Ваше сообщение:</label>
-          <div class="form-control">
-              <textarea id="text" [(ngModel)]="text" name="text" required #textField="ngModel"></textarea>
-              <div *ngIf="textField.invalid && (textField.touched || submitted)" class="error-message">
-                  Поле сообщение обязательно
-              </div>
-          </div>
-      </div>
+    <div class="form-group">
+        <label for="topic">Тема:</label>
+        <div class="form-control">
+            <select id="topic" [(ngModel)]="topicId" name="topic" required (change)="onTopicChange($event)" #topicField="ngModel">
+                <option *ngFor="let topic of topics" [value]="topic.id">{{ topic.name }}</option>
+                <option [value]="-1">ещё один пункт</option>
+            </select>
+            <div *ngIf="topicField.invalid && (topicField.touched || submitted)" class="error-message">
+                Выберите тему
+            </div>
+        </div>
+    </div>
 
-      <!-- капча -->
-      <div class="captcha-container">
-          <re-captcha (resolved)="handleSuccess($event)"></re-captcha>
-      </div>
+    <div *ngIf="showNewTopicInput" class="form-group">
+        <label for="newTopic">Новая тема:</label>
+        <div class="form-control">
+            <input type="text" id="newTopic" [(ngModel)]="newTopic" name="newTopic" required #newTopicField="ngModel">
+            <div *ngIf="newTopicField.invalid && (newTopicField.touched || submitted)" class="error-message">
+                Поле для новой темы должно быть заполнено
+            </div>
+        </div>
+    </div>
 
-      <button type="submit">Отправить письмо!</button>
+    <div class="form-group">
+        <label for="text">Ваше сообщение:</label>
+        <div class="form-control">
+            <textarea id="text" [(ngModel)]="text" name="text" required #textField="ngModel"></textarea>
+            <div *ngIf="textField.invalid && (textField.touched || submitted)" class="error-message">
+                Поле сообщение обязательно
+            </div>
+        </div>
+    </div>
+
+    <!-- капча -->
+    <div class="captcha-container">
+        <re-captcha (resolved)="handleSuccess($event)"></re-captcha>
+    </div>
+
+    <button type="submit">Отправить письмо!</button>
   </form>
 </div>
 
