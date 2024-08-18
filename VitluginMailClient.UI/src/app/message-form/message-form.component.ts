@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { MessageService } from '../services/message.service';
 import { HttpClient } from '@angular/common/http';
 import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
@@ -33,6 +33,7 @@ export class MessageFormComponent implements OnInit {
   topics: any[] = [];
   messageDetails: any = null;
   recaptchaToken: string | null = null;
+  submitted: boolean = false; // штука чтобы валидашки работали при отправке формы
 
   constructor(
     private http: HttpClient,
@@ -51,8 +52,13 @@ export class MessageFormComponent implements OnInit {
     this.showNewTopicInput = this.topicId === -1;
   }
 
-  submitForm(): void {
+  submitForm(form: NgForm): void {
     // проверка токена капчи перед отправкой
+    this.submitted = true;
+    if (form.invalid) {
+      return;
+    }
+
     if (!this.recaptchaToken) {
       console.error('reCAPTCHA token is missing');
       return;
@@ -78,7 +84,7 @@ export class MessageFormComponent implements OnInit {
       Phone: this.phone,
       TopicId: this.topicId,
       Text: this.text,
-      RecaptchaToken: this.recaptchaToken // передача токена капчи с сообщением
+      RecaptchaToken: this.recaptchaToken, // передача токена капчи с сообщением
     };
 
     this.messageService.createMessage(input).subscribe(
@@ -100,7 +106,7 @@ export class MessageFormComponent implements OnInit {
 
   handleSuccess(token: string | null): void {  
     if (token) {
-      this.recaptchaToken = token; // сохранение токена капчи при успешной вертификации
+      this.recaptchaToken = token; // сохранение токена капчи если прошли вертификацию
     } else {
       console.error('reCAPTCHA token is null');
     }

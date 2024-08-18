@@ -2,6 +2,7 @@
 using VitluginMailClientDomain;
 using VitluginMailClientDomain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.RegularExpressions;
 
 namespace VitluginMailClientApi.Controllers
 {
@@ -14,6 +15,20 @@ namespace VitluginMailClientApi.Controllers
         [HttpPost("[action]")]
         public IActionResult Create(CreateMessageDto input)
         {
+
+            if (string.IsNullOrEmpty(input.Name) ||
+               string.IsNullOrEmpty(input.Email) ||
+               string.IsNullOrEmpty(input.Phone) ||
+               input.TopicId <= 0 ||
+               string.IsNullOrEmpty(input.Text))
+            return BadRequest("Не все поля заполнены.");
+
+            if (!Regex.IsMatch(input.Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                return BadRequest("Неверный формат электронной почты.");
+
+            if (!Regex.IsMatch(input.Phone, @"^(\+\d{1,3}[- ]?)?\d{10}$"))
+                return BadRequest("Неверный номер телефона.");
+
             var contact = Context.Contacts.FirstOrDefault(c => c.Email == input.Email && c.Phone == input.Phone);
             if (contact == null)
             {
