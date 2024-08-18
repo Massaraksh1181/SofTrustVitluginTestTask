@@ -20,9 +20,15 @@
         <input type="text" id="newTopic" [(ngModel)]="newTopic" name="newTopic">
       </div>
   
+      
       <label for="text">Ваше сообщение:</label>
       <textarea id="text" [(ngModel)]="text" name="text" required></textarea>
-  
+      
+      <!-- капча -->
+      <div class="form-group">
+        <re-captcha (resolved)="handleSuccess($event)"></re-captcha>
+      </div>
+
       <button type="submit">Отправить</button>
     </form>
   </div>
